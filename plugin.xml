@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-thai-n-id" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ThaiNID</name>
+    <js-module name="Reader" src="www/ThaiNID.js">
+      <clobbers target="Reader"/>
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="ThaiNID">
+              <param name="ios-package" value="ThaiNID"/>
+            </feature>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="UISupportedExternalAccessoryProtocols">
+          <array>
+            <string>com.ftsafe.bR301</string>
+            <string>com.ftsafe.iR301</string>
+          </array>
+        </config-file>
+
+        <source-file src="src/ios/libiRockey301_ccid_release_ST_V1.20.3.a" framework="true"/>
+        <framework src="Foundation.framework"/>
+        <framework src="ExternalAccessory.framework"/>
+        <header-file src="src/ios/ft301u.h"/>
+        <header-file src="src/ios/ReaderInterface.h"/>
+        <header-file src="src/ios/winscard.h"/>
+        <header-file src="src/ios/wintypes.h"/>
+        <header-file src="src/ios/ThaiNID.h"/>
+        <source-file src="src/ios/ThaiNID.m"/>
+
+    </platform>
+</plugin>

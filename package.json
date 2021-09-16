@@ -1,0 +1,19 @@
+{
+  "name": "phopkrity",
+  "version": "1.0.0",
+  "description": "Plugin card reader",
+  "cordova": {
+    "id": "cordova-plugin-thai-n-id",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "phopkrity",
+  "license": "MIT"
+}
